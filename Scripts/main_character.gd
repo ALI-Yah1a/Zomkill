@@ -6,9 +6,9 @@ class_name Player
 @onready var hp_label: Label = $HPLabel
 @onready var hitbox: Area2D = $Hitbox
 
-const SPEED = 200.0
-const RUN_SPEED = 350.0
-const JUMP_VELOCITY = -480.0
+const SPEED = 400.0
+const RUN_SPEED = 750.0
+const JUMP_VELOCITY = -880.0
 
 var is_attacking = false
 var can_attack = true
@@ -28,7 +28,7 @@ func _input(event):
 	
 	if event.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-	
+		
 	if can_attack and not is_hurt:
 		if event.is_action_pressed("attack_1"):
 			attack("attack_1")
@@ -78,7 +78,8 @@ func update_facing_direction(direction: float):
 
 func update_animations(direction: float, is_running: bool):
 	if not is_on_floor():
-		animated_sprite_2d.play("jump")
+		if animated_sprite_2d.animation != "jump":
+			animated_sprite_2d.play("jump")
 	elif direction != 0:
 		if is_running:
 			animated_sprite_2d.play("run")

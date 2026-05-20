@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://8jywinkp4mrd"]
+
+[ext_resource type="Texture2D" uid="uid://c0hl6qtcbc2ji" path="res://Assets/Enemies/WhiteArrow.png" id="1_2k7kp"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=817904213]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_2k7kp")

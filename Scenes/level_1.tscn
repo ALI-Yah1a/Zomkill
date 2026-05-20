@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dkygi6mf86yk4"]
+
+[ext_resource type="PackedScene" uid="uid://bljua62l8ijmu" path="res://Scenes/main_character.tscn" id="1_8ffim"]
+[ext_resource type="Texture2D" uid="uid://bht3r52ijskqi" path="res://icon.svg" id="2_xfk5q"]
+[ext_resource type="Script" uid="uid://cwcocj658xpal" path="res://Scripts/indicators_manager.gd" id="3_7p6j4"]
+[ext_resource type="PackedScene" uid="uid://d0o0ylghnoadp" path="res://Scenes/zombie_1.tscn" id="3_6444e"]
+[ext_resource type="PackedScene" uid="uid://8jywinkp4mrd" path="res://Scenes/indicator.tscn" id="4_6444e"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7p6j4"]
+distance = -55.349995
+
+[node name="Level_1" type="Node2D" unique_id=1847235900 groups=["level"]]
+
+[node name="MainCharacter" parent="." unique_id=667882850 instance=ExtResource("1_8ffim")]
+position = Vector2(4239.9995, -441)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=320271725]
+position = Vector2(13.999999, -1066)
+scale = Vector2(20, 20)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1794142909]
+position = Vector2(106.80002, 169.25012)
+scale = Vector2(3.7914066, 1.8007803)
+texture = ExtResource("2_xfk5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1297079847]
+shape = SubResource("WorldBoundaryShape2D_7p6j4")
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1372205646]
+
+[node name="Zombie1" parent="Enemies" unique_id=159875657 instance=ExtResource("3_6444e")]
+position = Vector2(2229.9998, -356.99997)
+
+[node name="Zombie2" parent="Enemies" unique_id=1227325222 instance=ExtResource("3_6444e")]
+position = Vector2(1598.9999, -383.99997)
+
+[node name="Zombie3" parent="Enemies" unique_id=1682132484 instance=ExtResource("3_6444e")]
+position = Vector2(1025, -361)
+
+[node name="IndicatorsManager" type="CanvasLayer" parent="." unique_id=679504268]
+script = ExtResource("3_7p6j4")
+indicator_scene = ExtResource("4_6444e")

@@ -16,8 +16,8 @@ position = Vector2(13.999999, -1066)
 scale = Vector2(20, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=791388069]
-position = Vector2(46.666668, 1334.0001)
-scale = Vector2(20, 20)
+position = Vector2(0.625, 169.25012)
+scale = Vector2(2.132422, 1.8007803)
 texture = ExtResource("1_ebmjs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=482911577]
