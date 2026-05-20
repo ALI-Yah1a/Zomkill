@@ -26,16 +26,16 @@ texture = ExtResource("2_xfk5q")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1297079847]
 shape = SubResource("WorldBoundaryShape2D_7p6j4")
 
-[node name="Enemies" type="Node2D" parent="." unique_id=1372205646]
+[node name="Enemies" type="Node2D" parent="." unique_id=1141784714]
 
 [node name="Zombie1" parent="Enemies" unique_id=159875657 instance=ExtResource("3_6444e")]
 position = Vector2(2229.9998, -356.99997)
 
-[node name="Zombie2" parent="Enemies" unique_id=1227325222 instance=ExtResource("3_6444e")]
-position = Vector2(1598.9999, -383.99997)
+[node name="Zombie2" parent="Enemies" unique_id=1781628960 instance=ExtResource("3_6444e")]
+position = Vector2(2972, -337)
 
-[node name="Zombie3" parent="Enemies" unique_id=1682132484 instance=ExtResource("3_6444e")]
-position = Vector2(1025, -361)
+[node name="Zombie3" parent="Enemies" unique_id=1906857983 instance=ExtResource("3_6444e")]
+position = Vector2(3350.0002, -359.00003)
 
 [node name="IndicatorsManager" type="CanvasLayer" parent="." unique_id=679504268]
 script = ExtResource("3_7p6j4")

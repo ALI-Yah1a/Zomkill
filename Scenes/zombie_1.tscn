@@ -3,7 +3,28 @@
 [ext_resource type="Texture2D" uid="uid://ctnohtqooq23t" path="res://Assets/Enemies/Zombie_1/Dead.png" id="1_hivup"]
 [ext_resource type="Texture2D" uid="uid://5mt2mfy8abaj" path="res://Assets/Enemies/Zombie_1/Walk.png" id="1_uiejr"]
 [ext_resource type="Script" uid="uid://dkjt6ihbj75ai" path="res://Scripts/zombie_1.gd" id="1_xu3xv"]
+[ext_resource type="Texture2D" uid="uid://dvbqoj04n8dic" path="res://Assets/Enemies/Zombie_1/Attack.png" id="2_qc0el"]
 [ext_resource type="Texture2D" uid="uid://ctug3ksh67ru8" path="res://Assets/Enemies/Zombie_1/Hurt.png" id="2_xu3xv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r1w5"]
+atlas = ExtResource("2_qc0el")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sjth"]
+atlas = ExtResource("2_qc0el")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qo0x"]
+atlas = ExtResource("2_qc0el")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgjwv"]
+atlas = ExtResource("2_qc0el")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_050b7"]
+atlas = ExtResource("2_qc0el")
+region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5pll"]
 atlas = ExtResource("1_hivup")
@@ -77,6 +98,26 @@ region = Rect2(1152, 0, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_5r1w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sjth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qo0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgjwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_050b7")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_q5pll")
 }, {
 "duration": 1.0,
@@ -146,9 +187,8 @@ animations = [{
 radius = 8.199999
 height = 60.4
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sp6dj"]
-radius = 10.4
-height = 64.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qc0el"]
+size = Vector2(534.6001, 100.60001)
 
 [node name="Zombie1" type="CharacterBody2D" unique_id=159875657 groups=["enemies"]]
 scale = Vector2(5, 5)
@@ -163,12 +203,6 @@ autoplay = "walk"
 position = Vector2(-5.6, 33.4)
 shape = SubResource("CapsuleShape2D_wcv8q")
 
-[node name="Killzone" type="Area2D" parent="." unique_id=1840597575]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1731030716]
-position = Vector2(-5.6, 33.2)
-shape = SubResource("CapsuleShape2D_sp6dj")
-
 [node name="HPLabel" type="Label" parent="." unique_id=1954241469]
 offset_left = -20.4
 offset_top = -27.400002
@@ -180,4 +214,12 @@ text = "2/2"
 position = Vector2(21.8, 0)
 target_position = Vector2(0.79999924, 181.79999)
 
-[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1908223603]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1797620225]
+position = Vector2(-8.2, 28.4)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_qc0el")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

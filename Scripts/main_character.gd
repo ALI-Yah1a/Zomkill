@@ -70,7 +70,7 @@ func update_facing_direction(direction: float):
 	animated_sprite_2d.flip_h = is_facing_left
 	
 	if is_facing_left:
-		animated_sprite_2d.position.x = -8
+		animated_sprite_2d.position.x = -12.5
 		$Hitbox.position.x = -abs($Hitbox.position.x)
 	else:
 		animated_sprite_2d.position.x = 0
@@ -94,7 +94,6 @@ func attack(attack_anim: String):
 	animated_sprite_2d.play(attack_anim)
 	$Hitbox.monitoring = true
 	punch_sfx.play()
-	
 
 func take_damage(amount):
 	if is_hurt:
@@ -102,10 +101,15 @@ func take_damage(amount):
 	current_hp -= amount
 	update_hp_label()
 	
+	if is_attacking:
+		is_attacking = false
+		can_attack = true
+		$Hitbox.set_deferred("monitoring", false)
+	
 	if current_hp > 0:
 		is_hurt = true
 		animated_sprite_2d.play("hurt")
-		await get_tree().create_timer(0.3).timeout
+		await animated_sprite_2d.animation_finished
 		is_hurt = false
 	else:
 		die()
