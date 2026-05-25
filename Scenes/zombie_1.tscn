@@ -191,7 +191,6 @@ height = 60.4
 size = Vector2(534.6001, 100.60001)
 
 [node name="Zombie1" type="CharacterBody2D" unique_id=159875657 groups=["enemies"]]
-scale = Vector2(5, 5)
 script = ExtResource("1_xu3xv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1832253866]

@@ -7,7 +7,7 @@ class_name Enemy
 @onready var hp_label: Label = $HPLabel
 
 var speed = 150
-var chase_speed = 320
+var chase_speed = 370
 var attack_range = 150.0
 var attack_cooldown = 0.5
 var direction = 1
