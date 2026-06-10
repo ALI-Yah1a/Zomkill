@@ -1,0 +1,322 @@
+[gd_scene format=3 uid="uid://dha3howfr8qc6"]
+
+[ext_resource type="Texture2D" uid="uid://8v7cywufr2qa" path="res://Assets/background/background_layer_1.png" id="1_4cwpn"]
+[ext_resource type="Script" uid="uid://c01k8ibnitofo" path="res://UI/main_menu.gd" id="1_8ctay"]
+[ext_resource type="FontFile" uid="uid://bebpc4afkfbyr" path="res://Assets/Shadow of the Deads.ttf" id="1_p8ccj"]
+[ext_resource type="Texture2D" uid="uid://u8lwindxpl36" path="res://Assets/background/background_layer_2.png" id="2_f40uw"]
+[ext_resource type="Texture2D" uid="uid://b3xxyfe01u2e3" path="res://Assets/background/background_layer_3.png" id="3_8ctay"]
+[ext_resource type="AudioStream" uid="uid://hc5825gas5uq" path="res://Assets/ui/MainMenu_SoundTrack.mp3" id="7_ev3b6"]
+[ext_resource type="AudioStream" uid="uid://n5h4n07r8r1a" path="res://Assets/ui/press_sfx.mp3" id="9_cafmx"]
+[ext_resource type="Script" uid="uid://vr6wl7nwgqep" path="res://UI/button_sfx.gd" id="10_tcix6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ev3b6"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+shadow_size = 5
+shadow_offset = Vector2(0, 3.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f40uw"]
+bg_color = Color(0.24985075, 0.24985075, 0.24985075, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ctay"]
+bg_color = Color(0.093160845, 0.093160845, 0.09316083, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f40uw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tk8dj"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+shadow_size = 5
+shadow_offset = Vector2(0, 3.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mudq"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[node name="MainMenu" type="Control" unique_id=1672821733]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8ctay")
+
+[node name="Background" type="Control" parent="." unique_id=743322245]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=1948091486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4cwpn")
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="Background" unique_id=1424666572]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_f40uw")
+stretch_mode = 6
+
+[node name="TextureRect3" type="TextureRect" parent="Background" unique_id=1092314160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8ctay")
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=1995550376]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3137255)
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=1539606474]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.25
+offset_top = -35.0
+offset_right = 181.25
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 58
+
+[node name="Button" type="Button" parent="Buttons" unique_id=884140625]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("1_p8ccj")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_ev3b6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f40uw")
+text = "START GAME"
+
+[node name="Button3" type="Button" parent="Buttons" unique_id=626197039]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("1_p8ccj")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_tk8dj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f40uw")
+text = "EXIT"
+
+[node name="Label" type="Label" parent="." unique_id=331102381]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -312.0
+offset_top = 85.0
+offset_right = 312.0
+offset_bottom = 277.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.99215686)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 13
+theme_override_fonts/font = ExtResource("1_p8ccj")
+theme_override_font_sizes/font_size = 90
+text = "ZOMKILL"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1920912044]
+modulate = Color(1, 1, 1, 0.39215687)
+self_modulate = Color(1, 1, 1, 0.4627451)
+z_index = -1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 256.0
+offset_right = 430.0
+offset_bottom = 773.0
+
+[node name="Label2" type="Label" parent="." unique_id=1707929717]
+z_index = -1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -956.0
+offset_top = 267.0
+offset_right = 198.0
+offset_bottom = 459.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "This is the first version
+ of the game ZOMKILL,
+ there is only one level yet"
+
+[node name="Label3" type="Label" parent="." unique_id=612979544]
+z_index = -1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -952.0
+offset_top = 455.0
+offset_right = 202.0
+offset_bottom = 767.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "The Game is simple,
+ just click on the
+mouse left or right
+ button or the E button
+ to attack. Also you
+ can run by pressing the
+ shift button"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1161696797]
+stream = ExtResource("7_ev3b6")
+volume_db = -15.87
+autoplay = true
+
+[node name="ButtonSFX" type="AudioStreamPlayer" parent="." unique_id=1976487432]
+stream = ExtResource("9_cafmx")
+volume_db = -14.95
+script = ExtResource("10_tcix6")
+
+[node name="LevelSelection" type="Panel" parent="." unique_id=1601329873]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -298.0
+offset_top = -250.0
+offset_right = 202.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_2mudq")
+
+[node name="Buttons" type="Control" parent="LevelSelection" unique_id=1172457307]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="LevelSelection/Buttons" unique_id=509648464]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -26.0
+offset_right = 81.5
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button1" type="Button" parent="LevelSelection/Buttons/CenterContainer" unique_id=415402314]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("1_p8ccj")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_tk8dj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f40uw")
+text = "LEVEL 1"
+
+[node name="Label" type="Label" parent="LevelSelection" unique_id=1564737594]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 38.0
+offset_right = 449.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("1_p8ccj")
+theme_override_font_sizes/font_size = 30
+text = "SELECT A LEVEL"
+
+[node name="Back" type="Button" parent="LevelSelection" unique_id=172347602]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -110.5
+offset_top = -86.0
+offset_right = 110.5
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("1_p8ccj")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_tk8dj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f40uw")
+text = "BACK"
+
+[connection signal="pressed" from="Buttons/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/Button" to="ButtonSFX" method="_on_button_pressed"]
+[connection signal="pressed" from="Buttons/Button3" to="." method="_on_exit_3_pressed"]
+[connection signal="pressed" from="Buttons/Button3" to="ButtonSFX" method="_on_button_3_pressed"]
+[connection signal="pressed" from="LevelSelection/Buttons/CenterContainer/Button1" to="." method="_on_level_button_3_pressed"]
+[connection signal="pressed" from="LevelSelection/Buttons/CenterContainer/Button1" to="ButtonSFX" method="_on_level_button_3_pressed"]
+[connection signal="pressed" from="LevelSelection/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="LevelSelection/Back" to="ButtonSFX" method="_on_back_pressed"]

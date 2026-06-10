@@ -132,8 +132,8 @@ func die():
 		animated_sprite_2d.play("dead")
 		
 	collision_shape_2d.set_deferred("disabled", true)
-	get_tree().call_group("level", "zombie_killed")
 	await get_tree().create_timer(0.5).timeout
+	get_tree().call_group("level", "zombie_killed")
 	queue_free()
 
 func _on_detection_area_body_entered(body: Node2D) -> void:

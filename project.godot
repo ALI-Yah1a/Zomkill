@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Zomkill"
-run/main_scene="uid://dkygi6mf86yk4"
+run/main_scene="uid://dha3howfr8qc6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
