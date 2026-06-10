@@ -188,7 +188,7 @@ radius = 8.199999
 height = 60.4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qc0el"]
-size = Vector2(534.6001, 100.60001)
+size = Vector2(148.50002, 65.6)
 
 [node name="Zombie1" type="CharacterBody2D" unique_id=159875657 groups=["enemies"]]
 script = ExtResource("1_xu3xv")
@@ -210,13 +210,13 @@ offset_bottom = -4.4000015
 text = "2/2"
 
 [node name="GroundRay" type="RayCast2D" parent="." unique_id=391585937]
-position = Vector2(21.8, 0)
-target_position = Vector2(0.79999924, 181.79999)
+position = Vector2(36, 0)
+target_position = Vector2(1, 75)
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1908223603]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1797620225]
-position = Vector2(-8.2, 28.4)
+position = Vector2(44.249992, 31.200003)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_qc0el")
 

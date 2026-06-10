@@ -581,14 +581,19 @@ shape = SubResource("RectangleShape2D_esnnb")
 stream = SubResource("AudioStreamMP3_esnnb")
 
 [node name="HPLabel" type="Label" parent="." unique_id=495938010]
+z_index = 8
 offset_left = -12.666672
 offset_top = -54.666668
 offset_right = 27.333328
 offset_bottom = -31.666668
-text = "4/4"
+text = "5/5"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=64078472]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 2580
+limit_bottom = 815
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Hitbox" to="Hitbox" method="_on_body_entered"]

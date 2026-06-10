@@ -6,9 +6,9 @@ class_name Enemy
 @onready var ground_ray: RayCast2D = $GroundRay
 @onready var hp_label: Label = $HPLabel
 
-var speed = 150
-var chase_speed = 370
-var attack_range = 150.0
+var speed = 110
+var chase_speed = 130
+var attack_range = 38.0
 var attack_cooldown = 0.5
 var direction = 1
 var max_hp = 2
@@ -132,7 +132,7 @@ func die():
 		animated_sprite_2d.play("dead")
 		
 	collision_shape_2d.set_deferred("disabled", true)
-	get_tree().call_group("level", "monster_killed")
+	get_tree().call_group("level", "zombie_killed")
 	await get_tree().create_timer(0.5).timeout
 	queue_free()
 

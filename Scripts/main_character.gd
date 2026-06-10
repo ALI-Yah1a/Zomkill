@@ -6,15 +6,15 @@ class_name Player
 @onready var hp_label: Label = $HPLabel
 @onready var hitbox: Area2D = $Hitbox
 
-const SPEED = 400.0
-const RUN_SPEED = 750.0
-const JUMP_VELOCITY = -880.0
+const SPEED = 170.0
+const RUN_SPEED = 250.0
+const JUMP_VELOCITY = -480.0
 
 var is_attacking = false
 var can_attack = true
 var is_hurt = false
-var max_hp = 4
-var current_hp = 4
+var max_hp = 5
+var current_hp = 5
 
 func _ready():
 	update_hp_label()
