@@ -1,3 +1,5 @@
+<img width="1280" height="720" alt="Screenshot 2026-06-11 004055" src="https://github.com/user-attachments/assets/98c57dd0-2b6f-4f86-99a8-69c5eaf0f94e" />
+
 # ZOMKILL V.0.1
 - A 2D platformer where you conquer an exciting level. Complete all the objectives to win the game!
 - Where the primary challenge is navigating a character through a map filled with platforms and enemies. Player must jump between platforms and punch the zombies to kill them.
