@@ -2,6 +2,8 @@
 - A 2D platformer where you conquer an exciting level. Complete all the objectives to win the game!
 - Where the primary challenge is navigating a character through a map filled with platforms and enemies. Player must jump between platforms and punch the zombies to kill them.
 - This is the first version of the game, so there is only one objective and one level.
+- I used assets called Oak Woods on itch.io it was free when i used it.
+- I wanted to make a good game that i can enjoy building it in my free time and this kinda inspired me.
 - *Wait for future updates..*
 
 ## How To Run The Game?
