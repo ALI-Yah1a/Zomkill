@@ -4,7 +4,7 @@ extends Node2D
 @onready var zombies_label: Label = $CanvasLayer/ZombiesLabel
 
 var zombies_killed = 0
-const REQUIRED_ZOMBIES = 10
+const REQUIRED_ZOMBIES = 13
 
 func _ready():
 
