@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dytflnnup4anw" path="res://Assets/Tileset/background_layer_1.png" id="6_xrdnt"]
 [ext_resource type="Texture2D" uid="uid://ciaphncsprdnj" path="res://Assets/Tileset/background_layer_2.png" id="7_wrinw"]
 [ext_resource type="Texture2D" uid="uid://cqtl5t1qscji1" path="res://Assets/Tileset/background_layer_3.png" id="8_chwpn"]
+[ext_resource type="FontFile" uid="uid://bebpc4afkfbyr" path="res://Assets/Shadow of the Deads.ttf" id="10_chwpn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7p6j4"]
 texture = ExtResource("5_6444e")
@@ -726,3 +727,65 @@ layer = 4
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 32
+
+[node name="LevelCompleteUI" type="CanvasLayer" parent="." unique_id=1954219525]
+process_mode = 3
+visible = false
+
+[node name="Background" type="ColorRect" parent="LevelCompleteUI" unique_id=461369682]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelCompleteUI" unique_id=757470294]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -363.0
+offset_top = -496.0
+offset_right = 2034.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 160
+
+[node name="NextLevelButton" type="Button" parent="LevelCompleteUI/HBoxContainer" unique_id=36330557]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("10_chwpn")
+theme_override_font_sizes/font_size = 160
+text = "NEXT
+LEVEL"
+
+[node name="MainMenuButton" type="Button" parent="LevelCompleteUI/HBoxContainer" unique_id=1606891497]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("10_chwpn")
+theme_override_font_sizes/font_size = 160
+text = "BACK TO
+MAIN MENU"
+
+[node name="Label" type="Label" parent="LevelCompleteUI" unique_id=1790495457]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -281.0
+offset_top = 105.0
+offset_right = 343.0
+offset_bottom = 290.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("10_chwpn")
+theme_override_font_sizes/font_size = 80
+text = "ZOMKILL"
+
+[connection signal="pressed" from="LevelCompleteUI/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="LevelCompleteUI/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4tambtstvg6k"]
 
-[ext_resource type="Script" path="res://Scripts/level_2.gd" id="1_42uki"]
+[ext_resource type="Script" uid="uid://bajvunxjsgxb0" path="res://Scripts/level_2.gd" id="1_42uki"]
 [ext_resource type="PackedScene" uid="uid://bljua62l8ijmu" path="res://Scenes/main_character.tscn" id="2_42uki"]
 [ext_resource type="Script" uid="uid://cwcocj658xpal" path="res://Scripts/indicators_manager.gd" id="3_t7v2y"]
 [ext_resource type="PackedScene" uid="uid://8jywinkp4mrd" path="res://Scenes/indicator.tscn" id="4_ait6c"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cqtl5t1qscji1" path="res://Assets/Tileset/background_layer_3.png" id="8_hj5x7"]
 [ext_resource type="PackedScene" uid="uid://d0o0ylghnoadp" path="res://Scenes/zombie_1.tscn" id="9_yvrk7"]
 [ext_resource type="PackedScene" uid="uid://bb5i2jgyemgne" path="res://Scenes/platform.tscn" id="10_42uki"]
+[ext_resource type="FontFile" uid="uid://bebpc4afkfbyr" path="res://Assets/Shadow of the Deads.ttf" id="11_t7v2y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7p6j4"]
 texture = ExtResource("5_vcilj")
@@ -828,3 +829,62 @@ scale = Vector2(2, 2)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="platform2" unique_id=1670634594]
 libraries/ = SubResource("AnimationLibrary_bl0du")
 autoplay = &"new_animation-2"
+
+[node name="LevelCompleteUI" type="CanvasLayer" parent="." unique_id=2102797204]
+process_mode = 3
+visible = false
+
+[node name="Background" type="ColorRect" parent="LevelCompleteUI" unique_id=2074531565]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelCompleteUI" unique_id=1310280585]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -363.0
+offset_top = -496.0
+offset_right = 2034.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 160
+
+[node name="NextLevelButton" type="Button" parent="LevelCompleteUI/HBoxContainer" unique_id=1819346665]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("11_t7v2y")
+theme_override_font_sizes/font_size = 160
+text = "NEXT
+LEVEL"
+
+[node name="MainMenuButton" type="Button" parent="LevelCompleteUI/HBoxContainer" unique_id=1671102407]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("11_t7v2y")
+theme_override_font_sizes/font_size = 160
+text = "BACK TO
+MAIN MENU"
+
+[node name="Label" type="Label" parent="LevelCompleteUI" unique_id=1586005455]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -281.0
+offset_top = 105.0
+offset_right = 343.0
+offset_bottom = 290.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("11_t7v2y")
+theme_override_font_sizes/font_size = 80
+text = "ZOMKILL"
