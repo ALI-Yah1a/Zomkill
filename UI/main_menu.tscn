@@ -185,14 +185,14 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -956.0
+offset_left = -789.0
 offset_top = 267.0
-offset_right = 198.0
+offset_right = 365.0
 offset_bottom = 459.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
-text = "This is the first version
+text = "		This is the first version
  of the game ZOMKILL,
  there is only one level yet"
 
@@ -202,9 +202,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -952.0
+offset_left = -783.0
 offset_top = 455.0
-offset_right = 202.0
+offset_right = 371.0
 offset_bottom = 767.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
