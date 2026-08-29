@@ -764,11 +764,6 @@ limit_top = 0
 limit_right = 3100
 limit_bottom = 2000
 
-[node name="IndicatorsManager" type="CanvasLayer" parent="." unique_id=679504268]
-visible = false
-script = ExtResource("3_fxnjf")
-indicator_scene = ExtResource("4_xjeco")
-
 [node name="TileMap" type="TileMap" parent="." unique_id=1210066370]
 tile_set = SubResource("TileSet_6444e")
 format = 2
@@ -912,6 +907,32 @@ position = Vector2(2767, 1719)
 [node name="Coin12" parent="Coins" unique_id=428811718 instance=ExtResource("10_8jhox")]
 position = Vector2(2773, 381)
 
+[node name="Platforms" type="Node2D" parent="." unique_id=52364889]
+
+[node name="platform" parent="Platforms" unique_id=1256510442 instance=ExtResource("11_hed5s")]
+position = Vector2(212, 273)
+scale = Vector2(4, 4)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform" unique_id=2088655344]
+libraries/ = SubResource("AnimationLibrary_ait6c")
+autoplay = &"new_animation"
+
+[node name="platform2" parent="Platforms" unique_id=723769398 instance=ExtResource("11_hed5s")]
+position = Vector2(653, 1091.0001)
+scale = Vector2(5.5, 5.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform2" unique_id=1670634594]
+libraries/ = SubResource("AnimationLibrary_bl0du")
+autoplay = &"new_animation-2"
+
+[node name="platform3" parent="Platforms" unique_id=1799719365 instance=ExtResource("11_hed5s")]
+position = Vector2(1854, 281)
+scale = Vector2(4.5, 4.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform3" unique_id=1199192426]
+libraries/ = SubResource("AnimationLibrary_fxnjf")
+autoplay = &"new_animation"
+
 [node name="UI" type="CanvasLayer" parent="." unique_id=1095707574]
 layer = 4
 
@@ -927,30 +948,6 @@ theme_override_font_sizes/font_size = 44
 [node name="Coins_label" type="Label" parent="UI/VBoxContainer" unique_id=968946865]
 layout_mode = 2
 theme_override_font_sizes/font_size = 44
-
-[node name="platform" parent="." unique_id=1256510442 instance=ExtResource("11_hed5s")]
-position = Vector2(212, 273)
-scale = Vector2(4, 4)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="platform" unique_id=2088655344]
-libraries/ = SubResource("AnimationLibrary_ait6c")
-autoplay = &"new_animation"
-
-[node name="platform2" parent="." unique_id=723769398 instance=ExtResource("11_hed5s")]
-position = Vector2(653, 1091.0001)
-scale = Vector2(5.5, 5.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="platform2" unique_id=1670634594]
-libraries/ = SubResource("AnimationLibrary_bl0du")
-autoplay = &"new_animation-2"
-
-[node name="platform3" parent="." unique_id=1799719365 instance=ExtResource("11_hed5s")]
-position = Vector2(1854, 281)
-scale = Vector2(4.5, 4.5)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="platform3" unique_id=1199192426]
-libraries/ = SubResource("AnimationLibrary_fxnjf")
-autoplay = &"new_animation"
 
 [node name="LevelCompleteUI" type="CanvasLayer" parent="." unique_id=2102797204]
 process_mode = 3
@@ -1010,3 +1007,7 @@ theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
 theme_override_fonts/font = ExtResource("12_yykrm")
 theme_override_font_sizes/font_size = 80
 text = "ZOMKILL"
+
+[node name="IndicatorsManager" type="CanvasLayer" parent="." unique_id=679504268]
+script = ExtResource("3_fxnjf")
+indicator_scene = ExtResource("4_xjeco")

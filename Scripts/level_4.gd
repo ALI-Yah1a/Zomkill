@@ -10,8 +10,8 @@ extends Node2D
 
 var zombies_killed = 0
 var coins_collected = 0
-const REQUIRES_COINS = 12
-const REQUIRED_ZOMBIES = 12
+const REQUIRES_COINS = 16
+const REQUIRED_ZOMBIES = 16
 
 func _ready():
 	level_complete_ui.visible = false
@@ -39,7 +39,7 @@ func level_finished():
 
 func _on_next_level_button_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/level_4.tscn")
+	get_tree().change_scene_to_file("res://UI/main_menu.tscn")
 
 
 func _on_main_menu_button_pressed() -> void:

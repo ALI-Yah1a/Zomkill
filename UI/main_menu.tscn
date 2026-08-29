@@ -258,10 +258,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -190.5
-offset_top = -155.0
-offset_right = 190.5
-offset_bottom = -31.0
+offset_left = -267.5
+offset_top = -95.0
+offset_right = 12.5
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -270,7 +270,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
 theme_override_fonts/font = ExtResource("1_p8ccj")
-theme_override_font_sizes/font_size = 44
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_tk8dj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
@@ -284,10 +284,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -197.0
-offset_top = -53.33333
-offset_right = 197.0
-offset_bottom = 70.66669
+offset_left = -320.8333
+offset_top = 17.5
+offset_right = 73.16669
+offset_bottom = 141.50003
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -296,7 +296,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
 theme_override_fonts/font = ExtResource("1_p8ccj")
-theme_override_font_sizes/font_size = 44
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_tk8dj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
@@ -310,10 +310,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -197.0
-offset_top = 48.333344
-offset_right = 197.0
-offset_bottom = 172.33334
+offset_left = -72.499985
+offset_top = -111.66666
+offset_right = 321.5
+offset_bottom = 12.3333435
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -322,12 +322,38 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
 theme_override_fonts/font = ExtResource("1_p8ccj")
-theme_override_font_sizes/font_size = 44
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_tk8dj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_f40uw")
 text = "LEVEL 3"
+
+[node name="CenterContainer4" type="CenterContainer" parent="LevelSelection/Buttons" unique_id=2068633022]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.499985
+offset_top = 16.666687
+offset_right = 321.5
+offset_bottom = 140.66669
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button4" type="Button" parent="LevelSelection/Buttons/CenterContainer4" unique_id=416149528]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("1_p8ccj")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_tk8dj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f40uw")
+text = "LEVEL 4"
 
 [node name="Label" type="Label" parent="LevelSelection" unique_id=1564737594]
 layout_mode = 0
@@ -373,5 +399,7 @@ text = "BACK"
 [connection signal="pressed" from="LevelSelection/Buttons/CenterContainer2/Button2" to="ButtonSFX" method="_on_level_button_3_pressed"]
 [connection signal="pressed" from="LevelSelection/Buttons/CenterContainer3/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="LevelSelection/Buttons/CenterContainer3/Button3" to="ButtonSFX" method="_on_level_button_3_pressed"]
+[connection signal="pressed" from="LevelSelection/Buttons/CenterContainer4/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="LevelSelection/Buttons/CenterContainer4/Button4" to="ButtonSFX" method="_on_level_button_3_pressed"]
 [connection signal="pressed" from="LevelSelection/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="LevelSelection/Back" to="ButtonSFX" method="_on_back_pressed"]
