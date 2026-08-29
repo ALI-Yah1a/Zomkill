@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cqtl5t1qscji1" path="res://Assets/Tileset/background_layer_3.png" id="8_hj5x7"]
 [ext_resource type="PackedScene" uid="uid://d0o0ylghnoadp" path="res://Scenes/zombie_1.tscn" id="9_yvrk7"]
 [ext_resource type="PackedScene" uid="uid://bb5i2jgyemgne" path="res://Scenes/platform.tscn" id="10_42uki"]
+[ext_resource type="PackedScene" uid="uid://dval8l1acyu6y" path="res://Scenes/coin.tscn" id="10_ait6c"]
 [ext_resource type="FontFile" uid="uid://bebpc4afkfbyr" path="res://Assets/Shadow of the Deads.ttf" id="11_t7v2y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7p6j4"]
@@ -806,13 +807,62 @@ position = Vector2(1566, 607)
 [node name="Zombie12" parent="Zombies" unique_id=1040660916 instance=ExtResource("9_yvrk7")]
 position = Vector2(1155, 728)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=92247053]
+[node name="Coins" type="Node2D" parent="." unique_id=2018168250]
+
+[node name="Coin" parent="Coins" unique_id=839090211 instance=ExtResource("10_ait6c")]
+position = Vector2(483, 743)
+
+[node name="Coin2" parent="Coins" unique_id=198776511 instance=ExtResource("10_ait6c")]
+position = Vector2(68, 611)
+
+[node name="Coin3" parent="Coins" unique_id=1822515736 instance=ExtResource("10_ait6c")]
+position = Vector2(480, 436)
+
+[node name="Coin4" parent="Coins" unique_id=1320475272 instance=ExtResource("10_ait6c")]
+position = Vector2(526, 69)
+
+[node name="Coin5" parent="Coins" unique_id=266881400 instance=ExtResource("10_ait6c")]
+position = Vector2(948, 672)
+
+[node name="Coin6" parent="Coins" unique_id=623456784 instance=ExtResource("10_ait6c")]
+position = Vector2(843, 458)
+
+[node name="Coin7" parent="Coins" unique_id=2065910832 instance=ExtResource("10_ait6c")]
+position = Vector2(1186, 217)
+
+[node name="Coin8" parent="Coins" unique_id=887626020 instance=ExtResource("10_ait6c")]
+position = Vector2(1084, 595)
+
+[node name="Coin9" parent="Coins" unique_id=136071450 instance=ExtResource("10_ait6c")]
+position = Vector2(1878, 826)
+
+[node name="Coin10" parent="Coins" unique_id=1342282935 instance=ExtResource("10_ait6c")]
+position = Vector2(1872, 551)
+
+[node name="Coin11" parent="Coins" unique_id=230374428 instance=ExtResource("10_ait6c")]
+position = Vector2(1878, 351)
+
+[node name="Coin12" parent="Coins" unique_id=1354176541 instance=ExtResource("10_ait6c")]
+position = Vector2(1510, 253)
+
+[node name="Coin13" parent="Coins" unique_id=1556382639 instance=ExtResource("10_ait6c")]
+position = Vector2(1080, 372)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1095707574]
 layer = 4
 
-[node name="ZombiesLabel" type="Label" parent="CanvasLayer" unique_id=1176093785]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1101698041]
 offset_right = 40.0
-offset_bottom = 23.0
-theme_override_font_sizes/font_size = 32
+offset_bottom = 40.0
+theme_override_constants/separation = 18
+
+[node name="ZombiesLabel" type="Label" parent="UI/VBoxContainer" unique_id=2062470463]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+
+[node name="Coins_label" type="Label" parent="UI/VBoxContainer" unique_id=968946865]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
 
 [node name="platform" parent="." unique_id=1256510442 instance=ExtResource("10_42uki")]
 position = Vector2(47, 360)
