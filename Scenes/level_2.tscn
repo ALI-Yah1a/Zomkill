@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bb5i2jgyemgne" path="res://Scenes/platform.tscn" id="10_42uki"]
 [ext_resource type="PackedScene" uid="uid://dval8l1acyu6y" path="res://Scenes/coin.tscn" id="10_ait6c"]
 [ext_resource type="FontFile" uid="uid://bebpc4afkfbyr" path="res://Assets/Shadow of the Deads.ttf" id="11_t7v2y"]
+[ext_resource type="FontFile" uid="uid://buytnnf7ahylv" path="res://Assets/PixelOperator8-Bold.ttf" id="13_vcilj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7p6j4"]
 texture = ExtResource("5_vcilj")
@@ -940,3 +941,16 @@ scale = Vector2(2, 2)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform2" unique_id=1670634594]
 libraries/ = SubResource("AnimationLibrary_bl0du")
 autoplay = &"new_animation-2"
+
+[node name="Labels" type="Node" parent="." unique_id=1019601382]
+
+[node name="Label" type="Label" parent="Labels" unique_id=573207493]
+offset_left = 1514.0
+offset_top = 708.0
+offset_right = 1742.0
+offset_bottom = 783.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_vcilj")
+theme_override_font_sizes/font_size = 48
+text = "UP!"
+horizontal_alignment = 1

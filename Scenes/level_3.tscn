@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dval8l1acyu6y" path="res://Scenes/coin.tscn" id="10_8jhox"]
 [ext_resource type="PackedScene" uid="uid://bb5i2jgyemgne" path="res://Scenes/platform.tscn" id="11_hed5s"]
 [ext_resource type="FontFile" uid="uid://bebpc4afkfbyr" path="res://Assets/Shadow of the Deads.ttf" id="12_yykrm"]
+[ext_resource type="FontFile" uid="uid://buytnnf7ahylv" path="res://Assets/PixelOperator8-Bold.ttf" id="13_n4vm5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7p6j4"]
 texture = ExtResource("5_j77fg")
@@ -1011,3 +1012,16 @@ text = "ZOMKILL"
 [node name="IndicatorsManager" type="CanvasLayer" parent="." unique_id=679504268]
 script = ExtResource("3_fxnjf")
 indicator_scene = ExtResource("4_xjeco")
+
+[node name="Labels" type="Node" parent="." unique_id=1605223692]
+
+[node name="Label" type="Label" parent="Labels" unique_id=1728387880]
+offset_left = 2255.0
+offset_top = 135.0
+offset_right = 2729.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_n4vm5")
+theme_override_font_sizes/font_size = 25
+text = "Go down. DON'T WORRY!"
+horizontal_alignment = 1

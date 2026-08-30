@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cqtl5t1qscji1" path="res://Assets/Tileset/background_layer_3.png" id="8_chwpn"]
 [ext_resource type="PackedScene" uid="uid://dval8l1acyu6y" path="res://Scenes/coin.tscn" id="10_af3po"]
 [ext_resource type="FontFile" uid="uid://bebpc4afkfbyr" path="res://Assets/Shadow of the Deads.ttf" id="10_chwpn"]
+[ext_resource type="FontFile" uid="uid://buytnnf7ahylv" path="res://Assets/PixelOperator8-Bold.ttf" id="12_uy8f0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7p6j4"]
 texture = ExtResource("5_6444e")
@@ -827,6 +828,20 @@ theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
 theme_override_fonts/font = ExtResource("10_chwpn")
 theme_override_font_sizes/font_size = 80
 text = "ZOMKILL"
+
+[node name="Labels" type="Node" parent="." unique_id=1938699840]
+
+[node name="Label" type="Label" parent="Labels" unique_id=55672949]
+offset_left = 201.0
+offset_top = 51.0
+offset_right = 665.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_uy8f0")
+theme_override_font_sizes/font_size = 22
+text = "Kill all of the zombies.
+Collect all of the coins."
+horizontal_alignment = 1
 
 [connection signal="pressed" from="LevelCompleteUI/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
 [connection signal="pressed" from="LevelCompleteUI/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

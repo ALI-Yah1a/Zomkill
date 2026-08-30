@@ -192,9 +192,10 @@ offset_bottom = 459.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
-text = "		This is the first version
- of the game ZOMKILL,
- there is only one level yet"
+text = "		This is the second version
+ of the game ZOMKILL. Now,
+ there are 5 exciting levels, 
+not only one "
 
 [node name="Label3" type="Label" parent="." unique_id=612979544]
 z_index = -1
