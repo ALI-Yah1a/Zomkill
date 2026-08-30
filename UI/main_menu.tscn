@@ -259,9 +259,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -267.5
-offset_top = -95.0
+offset_top = -130.0
 offset_right = 12.5
-offset_bottom = -4.0
+offset_bottom = -39.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -285,9 +285,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -320.8333
-offset_top = 17.5
+offset_top = 35.0
 offset_right = 73.16669
-offset_bottom = 141.50003
+offset_bottom = 159.00003
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -311,9 +311,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -72.499985
-offset_top = -111.66666
+offset_top = -144.99998
 offset_right = 321.5
-offset_bottom = 12.3333435
+offset_bottom = -20.999985
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -337,9 +337,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -72.499985
-offset_top = 16.666687
+offset_top = 35.833344
 offset_right = 321.5
-offset_bottom = 140.66669
+offset_bottom = 159.83334
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -354,6 +354,32 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_f40uw")
 text = "LEVEL 4"
+
+[node name="CenterContainer5" type="CenterContainer" parent="LevelSelection/Buttons" unique_id=944010788]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.83331
+offset_top = -49.999985
+offset_right = 193.16669
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button5" type="Button" parent="LevelSelection/Buttons/CenterContainer5" unique_id=1052466009]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("1_p8ccj")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_tk8dj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f40uw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ctay")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f40uw")
+text = "LEVEL 5"
 
 [node name="Label" type="Label" parent="LevelSelection" unique_id=1564737594]
 layout_mode = 0
@@ -401,5 +427,7 @@ text = "BACK"
 [connection signal="pressed" from="LevelSelection/Buttons/CenterContainer3/Button3" to="ButtonSFX" method="_on_level_button_3_pressed"]
 [connection signal="pressed" from="LevelSelection/Buttons/CenterContainer4/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="LevelSelection/Buttons/CenterContainer4/Button4" to="ButtonSFX" method="_on_level_button_3_pressed"]
+[connection signal="pressed" from="LevelSelection/Buttons/CenterContainer5/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="LevelSelection/Buttons/CenterContainer5/Button5" to="ButtonSFX" method="_on_level_button_3_pressed"]
 [connection signal="pressed" from="LevelSelection/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="LevelSelection/Back" to="ButtonSFX" method="_on_back_pressed"]

@@ -4,18 +4,16 @@ extends Node2D
 @onready var zombies_label: Label = $UI/VBoxContainer/ZombiesLabel
 @onready var coins_label: Label = $UI/VBoxContainer/Coins_label
 @onready var level_complete_ui: CanvasLayer = $LevelCompleteUI
-@onready var next_level_button: Button = $LevelCompleteUI/HBoxContainer/NextLevelButton
 @onready var main_menu_button: Button = $LevelCompleteUI/HBoxContainer/MainMenuButton
 
 
 var zombies_killed = 0
 var coins_collected = 0
-const REQUIRES_COINS = 16
-const REQUIRED_ZOMBIES = 16
+const REQUIRES_COINS = 20
+const REQUIRED_ZOMBIES = 20
 
 func _ready():
 	level_complete_ui.visible = false
-	next_level_button.pressed.connect(_on_next_level_button_pressed)
 	main_menu_button.pressed.connect(_on_main_menu_button_pressed)
 	update_ui()
 
@@ -36,11 +34,6 @@ func level_finished():
 		await get_tree().create_timer(0.5).timeout
 		get_tree().paused = true
 		level_complete_ui.visible = true
-
-func _on_next_level_button_pressed() -> void:
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/level_5.tscn")
-
 
 func _on_main_menu_button_pressed() -> void:
 	get_tree().paused = false
