@@ -649,12 +649,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(218.00002, 1270)]
+"values": [Vector2(165, -96)]
 }
 
 [sub_resource type="Animation" id="Animation_t7v2y"]
 resource_name = "new_animation"
-length = 3.5
+length = 2.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -663,10 +663,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.5),
+"times": PackedFloat32Array(0, 1.9666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(218.00002, 1270), Vector2(218.00002, 1548)]
+"values": [Vector2(165, -96), Vector2(165, -354.99997)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ait6c"]
@@ -687,7 +687,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(899, 1443)]
+"values": [Vector2(853, -191)]
 }
 
 [sub_resource type="Animation" id="Animation_vcilj"]
@@ -704,7 +704,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(899, 1443), Vector2(899, 1601)]
+"values": [Vector2(853, -191), Vector2(853, -25)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bl0du"]
@@ -725,12 +725,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1357, 1360)]
+"values": [Vector2(1307, -256)]
 }
 
 [sub_resource type="Animation" id="Animation_n4vm5"]
 resource_name = "new_animation"
-length = 3.0
+length = 2.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -739,10 +739,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0.033333335, 1.9666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1357, 1360), Vector2(1357, 1614)]
+"values": [Vector2(1307, -256), Vector2(1307, -35)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fxnjf"]
@@ -763,12 +763,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2422, 779)]
+"values": [Vector2(2376, -865)]
 }
 
 [sub_resource type="Animation" id="Animation_3v663"]
 resource_name = "new_animation"
-length = 5.0
+length = 2.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -777,10 +777,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
+"times": PackedFloat32Array(0.033333335, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(2422, 779), Vector2(2422, 1114)]
+"values": [Vector2(2376, -865), Vector2(2376, -541)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w8kbg"]
@@ -978,7 +978,7 @@ position = Vector2(23, 853)
 position = Vector2(49, 1637)
 
 [node name="platform" parent="Platforms" unique_id=1256510442 instance=ExtResource("11_6xecf")]
-position = Vector2(218.00002, 1270)
+position = Vector2(165, -96)
 scale = Vector2(2.5, 2.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform" unique_id=2088655344]
@@ -986,7 +986,7 @@ libraries/ = SubResource("AnimationLibrary_ait6c")
 autoplay = &"new_animation"
 
 [node name="platform2" parent="Platforms" unique_id=723769398 instance=ExtResource("11_6xecf")]
-position = Vector2(899, 1443)
+position = Vector2(853, -191)
 scale = Vector2(2, 2)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform2" unique_id=1670634594]
@@ -994,7 +994,7 @@ libraries/ = SubResource("AnimationLibrary_bl0du")
 autoplay = &"new_animation-2"
 
 [node name="platform3" parent="Platforms" unique_id=1799719365 instance=ExtResource("11_6xecf")]
-position = Vector2(1357, 1360)
+position = Vector2(1307, -256)
 scale = Vector2(2, 2)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform3" unique_id=1199192426]
@@ -1002,7 +1002,7 @@ libraries/ = SubResource("AnimationLibrary_fxnjf")
 autoplay = &"new_animation"
 
 [node name="platform4" parent="Platforms" unique_id=346331793 instance=ExtResource("11_6xecf")]
-position = Vector2(2422, 779)
+position = Vector2(2376, -865)
 scale = Vector2(2.7, 2.7)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform4" unique_id=1534640442]
